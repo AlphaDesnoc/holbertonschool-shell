@@ -1,4 +1,4 @@
-# Shell, init files, variables and expansions
+# [Shell, init files, variables and expansions] (https://intranet.hbtn.io/projects/2022)
 
 ## 0. \<o>
 Create a script that creates an alias.
