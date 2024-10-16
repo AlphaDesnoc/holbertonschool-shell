@@ -1,0 +1,24 @@
+const titles = document.getElementsByClassName('panel-title')
+const statements = document.querySelectorAll(".task-card .panel-body")
+for (let i = 0; i < titles.length-3; i++) {
+    console.log("## " + titles[i].innerText)
+    const text = statements[i].querySelectorAll("p")
+    console.log(text[0].innerHTML)
+    const list = statements[i].querySelectorAll("ul")
+    if (list[0] !== undefined) {
+        const li = list[0].querySelectorAll("li")
+        for (let i = 0; i < li.length; i++) {
+            console.log("> - " + li[0].innerHTML)
+        }
+    }
+} 
+
+
+let list = []
+const elements = document.querySelectorAll('.list-group-item')
+elements.forEach(el => {
+    const text = el.textContent;
+    const match = text.match(/File:\s*(\S+)/)
+    list.push(match ? match[1] : null)
+})
+console.log(`${list.toString().replaceAll(",", " ")}`)
